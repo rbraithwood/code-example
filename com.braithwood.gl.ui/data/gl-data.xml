@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gl-library>
+
+	<board-game label="Rumble in the House" publisher="Flatlined Games" genre="family" minimumPlayers="3" maximumPlayers="6" minimumAge="8" maximumAge="100" minimumPlaytime="20" maximumPlaytime="20"/>
+	<board-game label="Pandemic" publisher="Z-man Games" genre="strategy" minimumPlayers="2" maximumPlayers="4" minimumAge="8" maximumAge="100" minimumPlaytime="45" maximumPlaytime="45"/>
+
+	<card-game label="Star Fluxx" publisher="Looney Labs" genre="family" minimumPlayers="2" maximumPlayers="6" minimumAge="8" maximumAge="100" minimumPlaytime="10" maximumPlaytime="40"/>
+	<card-game label="Cartoon Network Fluxx" publisher="Looney Labs" genre="family" minimumPlayers="2" maximumPlayers="6" minimumAge="8" maximumAge="100" minimumPlaytime="5" maximumPlaytime="20"/>
+	<card-game label="Fluxx" publisher="Looney Labs" genre="family" minimumPlayers="2" maximumPlayers="6" minimumAge="8" maximumAge="100" minimumPlaytime="5" maximumPlaytime="30"/>
+
+	<video-game label="Raving Rabbids Travel in Time" publisher="Ubisoft" genre="family" minimumPlayers="1" maximumPlayers="4" rating="e10plus">
+		<system type="wii"/>
+	</video-game>
+	<video-game label="Mario &amp; Sonic at the London 2012 Olympic Games" publisher="Sega" genre="family" minimumPlayers="1" maximumPlayers="4" rating="e">
+		<system type="wii"/>
+	</video-game>
+	<video-game label="Plants vs. Zombies" publisher="Popcap" genre="defense" minimumPlayers="1" maximumPlayers="1" rating="e10plus">
+		<system type="wii"/>
+		<system type="ps3"/>
+		<system type="xbox"/>
+		<system type="ios"/>
+		<system type="android"/>
+		<system type="pc"/>
+	</video-game>
+	
+</gl-library>

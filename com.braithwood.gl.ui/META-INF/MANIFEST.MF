@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Game Library UI
+Bundle-SymbolicName: com.braithwood.gl.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.braithwood.gl.ui.GameLibraryUIActivator
+Bundle-Vendor: Braithwood.com
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.braithwood.gl.ui.GLApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.braithwood.gl.ui.application"
+            name="com.braithwood.gl">
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.braithwood.gl.ui.perspectives.GameLibraryPerspective"
+            fixed="true"
+            icon="icons/alt_window_16.gif"
+            id="com.braithwood.gl.ui.perspective"
+            name="Game Library">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+      		allowMultiple="false"
+            category="com.braithwood.gl"
+            class="com.braithwood.gl.ui.views.GameLibraryView"
+            icon="icons/alt_window_16.gif"
+            id="com.braithwood.gl.ui.view"
+            name="Game Library"
+            restorable="true">
+      </view>
+      <category
+            id="com.braithwood.gl"
+            name="Game Library">
+      </category>
+   </extension>
+
+</plugin>

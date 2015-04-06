@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infopop>
+
+    <entry id="gl.dialog.add.game" title="About Add Game">
+        <body>Select the type of game and then fill in its details.</body>
+    </entry>
+
+    <entry id="gl.game.details" title="About Game Details">
+        <body>View details of the selected game.  You can make any changes to the details here.</body>
+    </entry>
+
+    <entry id="gl.jumpstart" title="About Jumpstart">
+		<body>Welcome Back!  Browse the section to see what there is to do in the Games Library today.</body>
+    </entry>
+
+    <entry id="gl.library" title="About Library">
+        <body>Manage games in your library.  You can filter the games shown by using the text box below.</body>
+        <action id="addGame" order="1" image="icons/actions/add12.png">
+            <description>Add Game - Add game to library</description>
+        </action>
+        <action id="deleteGame" order="2" image="icons/actions/delete12.png">
+            <description>Delete Game - Delete selected games</description>
+        </action>
+        <action id="hideBoardGames" order="3" image="icons/actions/hide-board-games12.png">
+            <description>Hide Board Games - Hide board games</description>
+        </action>
+        <action id="hideCardGames" order="4" image="icons/actions/hide-card-games12.png">
+            <description>Hide Card Games - Hide card games</description>
+        </action>
+        <action id="hideVideoGames" order="5" image="icons/actions/hide-video-games12.png">
+            <description>Hide Video Games - Hide video games</description>
+        </action>
+    </entry>
+    
+</infopop>
