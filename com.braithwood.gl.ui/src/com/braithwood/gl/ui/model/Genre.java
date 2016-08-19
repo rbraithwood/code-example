@@ -39,7 +39,7 @@ public enum Genre {
 	PLATFORMER("Platformer"),
 
 	@XmlEnumValue("rts")
-	RTS("Real Time Strategu (RTS)"),
+	RTS("Real Time Strategy (RTS)"),
 
 	@XmlEnumValue("sim")
 	SIM("Simulation");
