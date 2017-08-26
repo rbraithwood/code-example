@@ -17,6 +17,10 @@
       <product
             application="com.braithwood.gl.ui.application"
             name="com.braithwood.gl">
+         <property
+               name="appName"
+               value="com.braithwood.gl">
+         </property>
       </product>
    </extension>
    <extension

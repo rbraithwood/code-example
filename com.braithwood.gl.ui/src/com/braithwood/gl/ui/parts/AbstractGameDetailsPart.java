@@ -11,7 +11,7 @@ import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.Viewer;
-import org.eclipse.jface.viewers.ViewerSorter;
+import org.eclipse.jface.viewers.ViewerComparator;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
@@ -172,7 +172,7 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		toolkit.adapt(combo);
 		boardGenreViewer.setContentProvider(new GenreContentProvider());
 		boardGenreViewer.setLabelProvider(new GenreLabelProvider());
-		boardGenreViewer.setSorter(new GenreSorter());
+		boardGenreViewer.setComparator(new GenreComparator());
 		boardGenreViewer.addSelectionChangedListener(new BoardGameSelectionChangedListener());
 		boardGenreViewer.setInput(new Object());
 		boardGenreDecoration = new ControlDecoration(combo, SWT.TOP | SWT.LEFT);
@@ -307,7 +307,7 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		toolkit.adapt(combo);
 		cardGenreViewer.setContentProvider(new GenreContentProvider());
 		cardGenreViewer.setLabelProvider(new GenreLabelProvider());
-		cardGenreViewer.setSorter(new GenreSorter());
+		cardGenreViewer.setComparator(new GenreComparator());
 		cardGenreViewer.addSelectionChangedListener(new CardGameSelectionChangedListener());
 		cardGenreViewer.setInput(new Object());
 		cardGenreDecoration = new ControlDecoration(combo, SWT.TOP | SWT.LEFT);
@@ -442,7 +442,7 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		toolkit.adapt(combo);
 		videoGenreViewer.setContentProvider(new GenreContentProvider());
 		videoGenreViewer.setLabelProvider(new GenreLabelProvider());
-		videoGenreViewer.setSorter(new GenreSorter());
+		videoGenreViewer.setComparator(new GenreComparator());
 		videoGenreViewer.addSelectionChangedListener(new VideoGameSelectionChangedListener());
 		videoGenreViewer.setInput(new Object());
 		videoGenreDecoration = new ControlDecoration(combo, SWT.TOP | SWT.LEFT);
@@ -498,7 +498,7 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		toolkit.adapt(combo);
 		videoRatingViewer.setContentProvider(new GameRatingContentProvider());
 		videoRatingViewer.setLabelProvider(new GameRatingLabelProvider());
-		videoRatingViewer.setSorter(new GameRatingSorter());
+		videoRatingViewer.setComparator(new GameRatingComparator());
 		videoRatingViewer.addSelectionChangedListener(new VideoGameSelectionChangedListener());
 		videoRatingViewer.setInput(new Object());
 		videoRatingDecoration = new ControlDecoration(combo, SWT.TOP | SWT.LEFT);
@@ -519,7 +519,7 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		videoSystemsViewer.setUseHashlookup(true);
 		videoSystemsViewer.setContentProvider(new GameSystemContentProvider());
 		videoSystemsViewer.setLabelProvider(new GameSystemLabelProvider());
-		videoSystemsViewer.setSorter(new GameSystemSorter());
+		videoSystemsViewer.setComparator(new GameSystemComparator());
 		videoSystemsViewer.addSelectionChangedListener(new VideoGameSelectionChangedListener());
 		videoSystemsViewer.setInput(new Object());
 		videoSystemsDecoration = new ControlDecoration(table, SWT.TOP | SWT.LEFT);
@@ -768,9 +768,9 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		}
 	}
 
-	private static class GameSystemSorter extends ViewerSorter {
+	private static class GameSystemComparator extends ViewerComparator {
 
-		public GameSystemSorter() {
+		public GameSystemComparator() {
 			super();
 		}
 
@@ -824,9 +824,9 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		}
 	}
 
-	private static class GameRatingSorter extends ViewerSorter {
+	private static class GameRatingComparator extends ViewerComparator {
 
-		public GameRatingSorter() {
+		public GameRatingComparator() {
 			super();
 		}
 
@@ -880,12 +880,12 @@ public abstract class AbstractGameDetailsPart extends GLSectionPart {
 		}
 	}
 
-	private static class GenreSorter extends ViewerSorter {
-
-		public GenreSorter() {
+	private static class GenreComparator extends ViewerComparator {
+		
+		public GenreComparator() {
 			super();
 		}
-
+		
 		@Override
 		public int compare(Viewer viewer, Object e1, Object e2) {
 			if (e1 instanceof Genre && e2 instanceof Genre) {

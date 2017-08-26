@@ -7,6 +7,8 @@ Bundle-Activator: com.braithwood.gl.ui.GameLibraryUIActivator
 Bundle-Vendor: Braithwood.com
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- org.eclipse.ui.forms
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+ org.eclipse.ui.forms,
+ org.eclipse.equinox.ds,
+ org.eclipse.equinox.event
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy
